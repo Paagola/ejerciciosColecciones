@@ -37,6 +37,6 @@ public class Carta {
 
     @Override
     public String toString() {
-        return this.numero + " " + this.tipo;
+        return ((this.numero == 1)? "As":this.numero) + " " + this.tipo;
     }
 }
