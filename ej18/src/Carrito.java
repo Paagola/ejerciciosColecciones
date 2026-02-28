@@ -8,7 +8,11 @@ public class Carrito {
     }
 
     public void agrega(Elemento elemento){
-        carrito.add(elemento);
+        
+        if (!cambiarCantidad(elemento.getNomProducto(), elemento.getCantidad())){
+            carrito.add(elemento);
+        } 
+        
     }
 
     public int numeroDeElementos(){
@@ -28,5 +32,15 @@ public class Carrito {
             System.out.print(elemento.getNomProducto() +", ");
         }
         System.out.println();
+    }
+
+    public boolean cambiarCantidad(String nombre, int cantidad){
+        for (Elemento compra : carrito) {
+            if (compra.getNomProducto().equals(nombre)){
+                compra.setCantidad(compra.getCantidad() + cantidad);
+                return true;
+            }
+        }
+        return false;
     }
 }

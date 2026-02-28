@@ -20,4 +20,8 @@ public class Elemento {
     public double getPrecio() {
         return precio;
     }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
 }
