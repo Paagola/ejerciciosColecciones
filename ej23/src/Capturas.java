@@ -63,8 +63,4 @@ public class Capturas {
         }
         System.out.println("Puntos totales: " + pts);
     }
-
-
-
-
 }
